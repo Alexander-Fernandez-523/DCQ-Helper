@@ -2,8 +2,9 @@ function formatYesAndX() {
   var body = DocumentApp.getActiveDocument().getBody();
   
   // Define the variations of "Yes" and "x"
-  var variationsYes = [' - yes', ' - Yes', ' - YES', ' -yes', ' -Yes', ' -YES'];
-  var variationsX = [' -x', ' -X', ' - x', ' - X'];
+  var variationsYes = ['- yes', '- Yes', '- YES', '-yes', '-Yes', '-YES'];
+  var variationsX = ['-x', '-X', '- x', '- X'];
+  var dedupe = ['TD will dedupe'];
 
   // Function to search and format text
   function searchAndFormat(variations, replacementText) {
@@ -32,4 +33,5 @@ function formatYesAndX() {
   // Apply formatting for "Yes" (capitalize "Y") and "X"
   searchAndFormat(variationsYes, "-Yes");
   searchAndFormat(variationsX, "-X");
+  searchAndFormat(dedupe, "-TD will dedupe");
 }
