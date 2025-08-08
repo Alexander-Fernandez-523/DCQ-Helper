@@ -1,10 +1,13 @@
+function myFunction() {
+  
+}
 function formatYesAndX() {
   var body = DocumentApp.getActiveDocument().getBody();
   
   // Define the variations of "Yes" and "x"
   var variationsYes = ['- yes', '- Yes', '- YES', '-yes', '-Yes', '-YES'];
   var variationsX = ['-x', '-X', '- x', '- X'];
-  var dedupe = ['TD will dedupe'];
+  var dedupe = ['-TD will dedupe', '-td Will dedupe', '-td will Dedupe', , '-td will dedupe', '-TD WILL DEDUPE'];
 
   // Function to search and format text
   function searchAndFormat(variations, replacementText) {
